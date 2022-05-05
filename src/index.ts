@@ -10,12 +10,12 @@ class AdSales extends QinColumn {
     this.qinPeople.install(this);
     this.qinPeople.addAction((qinEvent) => {
       if (qinEvent.isMain) {
-        const frame = this.qinpel.chief.newFrame("Search People", "adpeople", {
+        const jobber = this.qinpel.chief.newJobber("Search People", "adpeople", {
           search: "people",
         });
-        frame.addWaiter((result) => {
+        jobber.addWaiter((result) => {
           console.log("Res: " + result);
-          frame.close();
+          jobber.close();
         });
       }
     });
